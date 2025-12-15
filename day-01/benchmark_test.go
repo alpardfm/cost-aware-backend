@@ -12,7 +12,7 @@ var (
 	globalInt       int
 )
 
-func BenchmarkBadUserAllocation(b *testing.B) {
+func Benchmark_BadUserAllocation(b *testing.B) {
 	b.ReportAllocs() // Report memory allocations
 	b.ResetTimer()
 
@@ -31,7 +31,7 @@ func BenchmarkBadUserAllocation(b *testing.B) {
 	}
 }
 
-func BenchmarkGoodUserAllocation(b *testing.B) {
+func Benchmark_GoodUserAllocation(b *testing.B) {
 	b.ReportAllocs() // Report memory allocations
 	b.ResetTimer()
 
@@ -50,7 +50,7 @@ func BenchmarkGoodUserAllocation(b *testing.B) {
 	}
 }
 
-func BenchmarkBadUserWithPreAllocation(b *testing.B) {
+func Benchmark_BadUserWithPreAllocation(b *testing.B) {
 	b.ReportAllocs()
 
 	for i := 0; i < b.N; i++ {
@@ -68,7 +68,7 @@ func BenchmarkBadUserWithPreAllocation(b *testing.B) {
 	}
 }
 
-func BenchmarkGoodUserWithPreAllocation(b *testing.B) {
+func Benchmark_GoodUserWithPreAllocation(b *testing.B) {
 	b.ReportAllocs()
 
 	for i := 0; i < b.N; i++ {
@@ -86,7 +86,7 @@ func BenchmarkGoodUserWithPreAllocation(b *testing.B) {
 	}
 }
 
-func TestStructSizes(t *testing.T) {
+func Test_StructSizes(t *testing.T) {
 	badSize := unsafe.Sizeof(BadUser{})
 	goodSize := unsafe.Sizeof(GoodUser{})
 
@@ -106,7 +106,7 @@ func TestStructSizes(t *testing.T) {
 	}
 }
 
-func TestMemoryAlignment(t *testing.T) {
+func Test_MemoryAlignment(t *testing.T) {
 	// Test field offsets
 	var bad BadUser
 	var good GoodUser
