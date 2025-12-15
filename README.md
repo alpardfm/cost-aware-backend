@@ -40,26 +40,37 @@
 - ✅ **$100/month cost savings** per 10k users (simulated)
 
 ## 🏗️ Project Structure
-cost-aware-backend/
-├── README.md # This file
-├── Makefile # Automation commands
-├── go.mod # Go module definition
-├── docker-compose.yml # Local infrastructure
-├── day-01/ # Day 1: Memory Optimization
-│ ├── main.go # Implementation
-│ ├── benchmark_test.go # Benchmarks
-│ └── README.md # Day-specific documentation
-├── day-02/ # Day 2: Slice Performance
-├── ... # Days 3-30
-├── template/ # Template for new days
-│ ├── main.go
-│ ├── benchmark_test.go
-│ └── README.md
-├── docs/ # Additional documentation
-├── scripts/ # Utility scripts
-├── shared/ # Shared code between days
-├── benchmarks/ # Benchmark results
-└── infra/ # Infrastructure configs
+    cost-aware-backend/
+
+    ├── README.md # Main documentation (this file)
+    ├── Makefile # Automation commands (build, test, run)
+    ├── go.mod # Go module definition
+    ├── docker-compose.yml # Local development infrastructure
+    ├── day-01/ # Day 1: Memory Optimization
+    │ ├── main.go # Implementation
+    │ ├── benchmark_test.go # Benchmarks and tests
+    │ └── README.md # Day-specific documentation
+    ├── day-02/ # Day 2: Slice Performance
+    ├── ... # Days 3-30 (following same structure)
+    ├── template/ # Template for new days
+    │ ├── main.go
+    │ ├── benchmark_test.go
+    │ └── README.md
+    ├── docs/ # Additional documentation
+    │ ├── concepts.md # Core concepts explained
+    │ └── results.md # Benchmark results summary
+    ├── scripts/ # Utility scripts
+    │ ├── setup.sh # Environment setup
+    │ └── benchmark.sh # Run all benchmarks
+    ├── shared/ # Shared code between days
+    │ ├── utils/ # Utility functions
+    │ └── types/ # Common data types
+    ├── benchmarks/ # Benchmark results
+    │ ├── day-01.txt # Day 1 benchmark results
+    │ └── comparisons.md # Performance comparisons
+    └── infra/ # Infrastructure configurations
+    ├── Dockerfile # Application Dockerfile
+    └── monitoring/ # Monitoring setup
 
 ## 🛠️ Tech Stack
 - **Language:** Go 1.21+
