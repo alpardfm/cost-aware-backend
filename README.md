@@ -13,7 +13,7 @@
 
 | Day | Topic | Status | Impact | Commit |
 |-----|-------|--------|---------|--------|
-| 1 | Memory Layout & Struct Alignment | ✅ Done | 25% memory reduction | [#1](https://github.com/alpardfm/cost-aware-backend/commit/2153b6ed9448e2ea58c3dbbe52face43274b0230) |
+| 1 | Memory Layout & Struct Alignment | ✅ Done | 25% memory reduction | [#1](https://github.com/alpardfm/cost-aware-backend/tree/master/day-01) |
 | 2 | Slice vs Array Performance | 🔄 In Progress | - | - |
 | 3 | Map Internals & Overhead | ⏳ Pending | - | - |
 | 4 | JSON Processing Efficiency | ⏳ Pending | - | - |
