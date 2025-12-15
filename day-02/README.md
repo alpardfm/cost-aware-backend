@@ -1,19 +1,25 @@
-**`# Day 2: Slice Performance & Pre-allocation## 📋 Overview**
+# Day 2: Slice Performance & Pre-allocation
+## 📋 Overview
 Optimizing slice usage in Go by understanding growth patterns and using pre-allocation to reduce allocations and improve performance.
 
-**## 🎯 Problem Statement**
+## 🎯 Problem Statement
 Go slices grow dynamically by reallocating and copying data when capacity is exceeded. This causes:
 - ****Multiple memory allocations**** (expensive syscalls)
 - ****Data copying**** (O(n) operations)
-- ****Memory fragmentation****- ****Increased GC pressure****Example Problem:**** Appending to a slice in a loop without pre-allocation.
+- ****Memory fragmentation****
+- ****Increased GC pressure****
+  
+****Example Problem:**** Appending to a slice in a loop without pre-allocation.
 
-**## 🔍 Root Cause Analysis### How Slices Work Internally:**
+## 🔍 Root Cause Analysis
+### How Slices Work Internally:
 ```go
 type sliceHeader struct {
     Data uintptr  // Pointer to underlying array
     Len  int      // Current length
     Cap  int      // Current capacity
-} // 24 bytes on 64-bit systems`
+} // 24 bytes on 64-bit systems
+```
 
 ### **Growth Algorithm:**
 
