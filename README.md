@@ -92,30 +92,6 @@ docker --version
 
 # Install make
 make --version
-
-```text
-## 🛠️ Tech Stack
-
-- **Language:** Go 1.21+
-- **Database:** PostgreSQL 15
-- **Cache:** Redis 7
-- **Monitoring:** Prometheus + Grafana
-- **CI/CD:** GitHub Actions
-- **Infrastructure:** Docker + Docker Compose
-- **Testing:** Go testing framework with benchmarks
-
-## 🏃‍♂️ Getting Started
-
-### Prerequisites
-```bash
-# Install Go
-go version
-
-# Install Docker (optional for full setup)
-docker --version
-
-# Install make
-make --version
 ```
 
 ### **Quick Start**
