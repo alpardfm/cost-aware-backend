@@ -173,9 +173,9 @@ func calculateCostImpact(beforeMem, afterMem uintptr) {
 	for _, users := range userCounts {
 		scaledSavings := monthlySavings * float64(users) / 1_000_000
 		if users >= 1_000_000_000 {
-			fmt.Printf("  • %,d users: $%.2f/month savings\n", users, scaledSavings)
+			fmt.Printf("  • %d users: $%.2f/month savings\n", users, scaledSavings)
 		} else {
-			fmt.Printf("  • %,d users: $%.4f/month savings\n", users, scaledSavings)
+			fmt.Printf("  • %d users: $%.4f/month savings\n", users, scaledSavings)
 		}
 	}
 
