@@ -14,8 +14,8 @@
 | Day | Topic | Status | Impact | Commit |
 |-----|-------|--------|---------|--------|
 | 1 | Memory Layout & Struct Alignment | ✅ Done | 25% memory reduction | [#1](https://github.com/alpardfm/cost-aware-backend/tree/master/day-01) |
-| 2 | Slice vs Array Performance | 🔄 In Progress | - | - |
-| 3 | Map Internals & Overhead | ⏳ Pending | - | - |
+| 2 | Slice vs Array Performance | ✅ Done | **4x faster, 91% fewer allocations** | [#2](https://github.com/alpardfm/cost-aware-backend/tree/master/day-02) |
+| 3 | Map Internals & Overhead | 🔄 In Progress | - | - |
 | 4 | JSON Processing Efficiency | ⏳ Pending | - | - |
 | 5 | Profiling & Benchmarking | ⏳ Pending | - | - |
 | 6 | Database Connection Pooling | ⏳ Pending | - | - |
@@ -82,30 +82,6 @@
 - **Testing:** Go testing framework with benchmarks
 
 ## 🏃‍♂️ Getting Started
-### Prerequisites
-```bash
-# Install Go
-go version
-
-# Install Docker (optional for full setup)
-docker --version
-
-# Install make
-make --version
-
-```text
-## 🛠️ Tech Stack
-
-- **Language:** Go 1.21+
-- **Database:** PostgreSQL 15
-- **Cache:** Redis 7
-- **Monitoring:** Prometheus + Grafana
-- **CI/CD:** GitHub Actions
-- **Infrastructure:** Docker + Docker Compose
-- **Testing:** Go testing framework with benchmarks
-
-## 🏃‍♂️ Getting Started
-
 ### Prerequisites
 ```bash
 # Install Go
