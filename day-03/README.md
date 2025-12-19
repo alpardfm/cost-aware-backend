@@ -8,26 +8,22 @@ Understanding Go map's hidden memory costs and when to use alternatives for bett
 
 ## 🔍 Root Cause Analysis
 
-### Map Internals (Hash Table):`
+### Map Internals (Hash Table):
 
-Each map entry contains:
-
-┌────────────┬────────────┬────────────┬────────────┐
-
-│ Key (8)    │ Value(16)  │ Next*(8)   │ Overflow   │
-
-│            │            │            │  header    │
-
-└────────────┴────────────┴────────────┴────────────┘
-
-Total: ~40-50 bytes overhead per entry!
 ```text
+Each map entry contains:
+┌─────────────┬───────────────┬──────────────┬───────────────┐
+│   Key (8)   │   Value(16)   │   Next*(8)   │   Overflow    │
+│             │               │              │   header      │
+└─────────────┴───────────────┴──────────────┴───────────────┘
+```
+Total: ~40-50 bytes overhead per entry!
+
 ### Why So Much Overhead?
 1. **Hash table buckets** (8 entries per bucket)
 2. **Linked list for collisions** (next pointers)
 3. **Load factor padding** (only 80% full on average)
 4. **Memory alignment** (8-byte boundaries)
-```
 
 ### The Hidden O(n²) Problem:
 ```go
